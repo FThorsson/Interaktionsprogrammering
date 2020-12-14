@@ -1,0 +1,87 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("images/greyzz.png");
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes colorFade {
+    from {
+        color: red;
+    }
+    to {
+        color: black;
+    }
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+p {
+    font-family: 'Times New Roman', Times, serif;
+    padding-bottom: 20px;
+}
+
+.image-post {
+    border: rgba(0, 0, 0, 0.2);
+    border-style: groove;
+    border-width: thin;
+    border-radius: 15px;
+    width: 65%;
+    padding: 15px 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 60px auto;
+    animation: fadeInAnimation ease 3s
+}
+
+.image-post h1 {
+    animation: colorFade ease 5s;
+}
+
+.post-image {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.post-title {
+    padding-top: 10px;
+}
+
+#wrapper {
+    background-color: white;
+    width: 60%;
+    margin: auto;
+    padding-bottom: 40px;
+}
+
+#header {
+    position: relative;
+    background-image: url("images/header.jpeg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50vh;
+}
+
+#header h1 {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 5em;
+}

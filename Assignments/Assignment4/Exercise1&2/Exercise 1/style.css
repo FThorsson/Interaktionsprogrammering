@@ -1,0 +1,119 @@
+#menu {
+    position: relative;
+    top: 75px;
+    width: 180px;
+}
+
+.content {
+    position: relative;
+    left: 300px;
+}
+
+img {
+    width: 400px;
+}
+
+a {
+    text-decoration: none;
+}
+
+#accordion {
+    position: relative;
+    left: 300px;
+    width: 600px;
+}
+#accordion div {
+    height: 400px;
+
+} 
+
+#tabs {
+    position: relative;
+    left: 300px;
+    width: 600px;
+}
+
+#selectable .ui-selected { 
+    background: #8ad1bf; 
+    color: white; 
+}
+
+#selectable {
+    position: relative;
+    left: 300px;
+    width: 400px;
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0;
+}
+
+#selectable li { 
+    margin: 3px; 
+    padding: 0.4em; 
+    font-size: 1.4em; 
+    height: 18px; 
+}
+
+#selectable .ui-selected { 
+    background: #8ad1bf; 
+    color: white; 
+}
+
+#selectable {
+    position: relative;
+    left: 300px;
+    width: 400px;
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0;
+}
+
+#selectable li { 
+    margin: 3px; 
+    padding: 0.4em; 
+    font-size: 1.4em; 
+    height: 18px; 
+}
+
+#selectable .ui-selected { 
+    background: #8ad1bf; 
+    color: white; 
+}
+
+#selectable {
+    position: relative;
+    left: 300px;
+    width: 400px;
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0;
+}
+
+#selectable li { 
+    margin: 3px; 
+    padding: 0.4em; 
+    font-size: 1.4em; 
+    height: 18px; 
+}
+
+#sortable { 
+    position: relative;
+    left: 300px;
+    width: 400px;
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0; 
+}
+
+#sortable li { 
+    margin: 0 3px 3px 3px; 
+    padding: 0.4em; 
+    padding-left: 1.5em; 
+    font-size: 1.4em; 
+    height: 18px; 
+}
+
+#sortable li span { 
+    position: absolute; 
+    margin-left: -1.3em; 
+}

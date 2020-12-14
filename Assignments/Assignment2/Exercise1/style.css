@@ -1,0 +1,60 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgrey;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    opacity: 60%;
+}
+
+.mainContainer {
+    width: 350px;
+    height: 350px;
+    border: 0.8em #fff solid;
+    overflow: hidden;
+}
+
+.imageContainer {
+    height: 100%;
+}
+
+.imageContainer img {
+    position: relative;
+    height: 100%;
+    margin: auto;
+    display: block;
+}
+
+/* .text {
+    position: absolute;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 0.5rem;
+    width: 100%;
+} */
+
+.previous {
+    position: relative;
+    padding-right: 15px;
+    cursor: pointer;
+}
+
+.next {
+    position: relative;
+    padding-left: 15px;
+    cursor: pointer;
+}
