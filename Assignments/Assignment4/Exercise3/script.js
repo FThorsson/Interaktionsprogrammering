@@ -9,15 +9,15 @@ $(document).ready(function () {
     $(".droppable").droppable({
         drop: function (event, ui) {
             let currentIndex = document.getElementsByClassName("droppable");
-            console.log(currentIndex);
             for (let i = 0; i < currentIndex.length; i++) {
                 if ($(currentIndex[i]).find("img").attr("src") != $(ui.draggable).find("img").attr("src")) {
                 } else {
                     return;
                 }
             }
-            $(this).find("a").attr("href", $(ui.draggable).find("img").attr("src"));
-            $(this).find("img").attr("src", $(ui.draggable).find("img").attr("src"));
+            $(this).empty();
+            $(this).append(`<a href="${$(ui.draggable).find("img").attr("src")}" data-lighter>
+                            <img src="${$(ui.draggable).find("img").attr("src")}"></img></a>`);
         }
     });
 
