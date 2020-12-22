@@ -8,12 +8,11 @@ $("document").ready(function () {
         $(this).attr("src", $(this).attr("src").replace("-rum.jpg", ".jpg"));
     });
 
-    /* När man rör med musen över miniatyrbilderna (på huvudsidan) byter man namn
-    på produktbilden och den ändras till den nya färgen.
-    Funkar inte just nu.. :))) */
+    /* Ändra produktbild och beskrivning av färg när man hovrar över thumbnail */
     $(".thumbnail-color").mouseover(function() {
         $(".product-image").attr("src", $(this).attr("src"));
+        //ändra texten för färg här
     }).mouseout(function() {
-        $(".product-image").attr($(this).attr("src"), "src");
+        $(".product-image").attr("src");
     });
 });
