@@ -8,11 +8,20 @@ $("document").ready(function () {
         $(this).attr("src", $(this).attr("src").replace("-rum.jpg", ".jpg"));
     });
 
-    /* Ändra produktbild och beskrivning av färg när man hovrar över thumbnail */
+    /* Ändra produktbild när man hovrar över thumbnail */
     $(".thumbnail-color").mouseover(function() {
-        $(".product-image").attr("src", $(this).attr("src"));
-        //ändra texten för färg här
+        $(this).prev().attr("src", $(this).attr("src"));
     }).mouseout(function() {
-        $(".product-image").attr("src");
+        $(this).prev().attr("src", $(this).prev().attr("default"));
     });
+
+    //Rotera meny
+    $(".sort-button").click(function() {
+        $(".dropdown-content").slideDown(100);
+    });
+
+    document.getElementById('.fas').addEventListener('click', function() {
+        let icon = this.querySelector('.right i.fa');
+        icon.classList.toggle('rotate');
+      });
 });
