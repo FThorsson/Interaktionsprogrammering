@@ -1,29 +1,3 @@
-@media (max-width: 400px) {
-    div.container {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    div.top-bar {
-        display: flex;
-        flex-direction: column;
-    }
-
-    div.top-bar div {
-        border-bottom: solid white 5px;
-    }
-
-    div.text-bar {
-        display: flex;
-        flex-direction: column;
-    }
-
-    div.bottom-bar {
-        display: none;
-    }
-
-}
-
 * {
     padding: 0;
     margin: 0;
@@ -82,4 +56,30 @@ p {
     line-height: 5vh;
     height: 10vh;
     width: 100%;
+}
+
+@media (max-width: 400px) {
+    div.container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    div.top-bar {
+        display: flex;
+        flex-direction: column;
+    }
+
+    div.top-bar div {
+        border-bottom: solid white 5px;
+    }
+
+    div.text-bar {
+        display: flex;
+        flex-direction: column;
+    }
+
+    div.bottom-bar {
+        display: none;
+    }
+
 }
