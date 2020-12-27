@@ -24,4 +24,11 @@ $("document").ready(function () {
         let icon = this.querySelector('.right i.fa');
         icon.classList.toggle('rotate');
       });
+
+      const menuIcon = document.querySelector("#menu-icon")
+      menuIcon.addEventListener("click", () => {
+          console.log("Det blir ett klick");
+        document.getElementByClass('.menu').style.display = "block";
+
+      });
 });
