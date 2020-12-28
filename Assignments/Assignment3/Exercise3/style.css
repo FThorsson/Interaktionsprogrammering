@@ -1,0 +1,35 @@
+* {
+    padding: 5px;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: row;
+}
+
+.choose {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+#textInput {
+    width: 250px;
+    height: 100px;
+}
+
+#box-select {
+    width: 100px;
+    margin-left: -5px;
+}
+
+#submitButton {
+    width: 100px;
+    margin-left: 5px;
+}
+#newParagraphButton {
+    width: 120px;
+    margin-left: 5px;
+}

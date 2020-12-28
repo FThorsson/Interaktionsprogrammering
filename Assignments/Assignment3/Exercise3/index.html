@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <title>Exercise 3</title>
+</head>
+
+<body>
+    
+    <div class="input-container">
+        <div class="text-field">
+            <textarea id="textInput" placeholder="Once upon a time..."></textarea>
+        </div>
+            
+            <div class="choose">
+                <!-- <label for="box-select"></label> -->
+                <select name="boxes" id="box-select">
+                    <option value="Style" disabled select>Style</option>
+                    <option value="Arial">Arial</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Verdana">Verdana</option>
+                </select>
+                <button id="submitButton" class="btn btn-primary">Change style</button>
+                <button id="newParagraphButton" class="btn btn-primary">New paragraph</button>
+            </div>
+
+    </div>
+    
+    <div class="output-container">
+            <div class="textRight">
+                <h1>Story</h1>
+                <p id="output">Once upon a time...</p>
+            </div>
+            
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

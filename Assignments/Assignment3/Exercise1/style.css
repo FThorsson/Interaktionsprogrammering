@@ -1,0 +1,15 @@
+body {
+    background-color: #F3F3F3;
+}
+
+.container {
+    position: fixed;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+}
+
+.fas {
+    color: blue;
+    
+}
