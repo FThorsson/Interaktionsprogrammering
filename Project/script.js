@@ -15,9 +15,10 @@ $("document").ready(function () {
         $(this).prev().attr("src", $(this).prev().attr("default"));
     });
 
-    //Rotera meny
+    //Sorteringsknapp kategorisida
     $(".sort-button").click(function () {
-        $(".dropdown-content").slideDown(100);
+        $(".dropdown-content").slideDown(200);
+        $(this).find("i").removeClass("fas fa-chevron-down").addClass("fas fa-chevron-up"); //ändrar pilen
     });
 
     //Ändrar bilden som man klickar på, på produktsidan
@@ -29,21 +30,24 @@ $("document").ready(function () {
     /* När man klickar på produktbild på kategorisidan hamnar den bilden på produktsidan */
     $(".product-image").click(function () {
         $("#image-1").addClass("active").siblings().removeClass("active");
-        /* $(".category-page").css("display", "none");
-        $(".product-page").css("display", "block"); */
+        $(".category-page").css("display", "none");
+        $(".product-page").css("display", "block");
         $(".main-image img").attr("src", $(this).attr("src").replace("-rum.jpg", ".jpg"));
         $("#image-1").attr("src", $(this).attr("src").replace("-rum.jpg", ".jpg"));
         $("#image-2").attr("src", $(this).attr("src").replace("-rum.jpg", "-profil.jpg"));
         $("#image-3").attr("src", $(this).attr("src").replace());
-        $(".information-container").attr("h3", $(this).attr("h3"));
-        console.log($(".information-container").attr("h3", $(this).siblings().find().attr("product-name"), $(this).attr("product-name")));
+        $("#color-1").attr("src", $(".main-image img").attr("src"));
+        $("#color-2").attr("src");
+
+        //Försöker få så produktnamnet hamnar på produktsidan, på h3 taggen... (blir sen samma för thumbnail)
+        $(".product-information").attr("h3", $(".product-name").attr("h3"));
     });
 
     /* När man klickar på miniatyrbilden på kategorisidan hamnar den bilden på produktsidan */
     $(".thumbnail-color").click(function () {
         $("#image-1").addClass("active").siblings().removeClass("active");
-        /* $(".category-page").css("display", "none");
-        $(".product-page").css("display", "block"); */
+        $(".category-page").css("display", "none");
+        $(".product-page").css("display", "block");
         $(".main-image img").attr("src", $(this).attr("src").replace());
         $("#image-1").attr("src", $(this).attr("src").replace());
         $("#image-2").attr("src", $(this).attr("src").replace(".jpg", "-profil.jpg"));
@@ -52,11 +56,10 @@ $("document").ready(function () {
         //FRÅGA: Vissa soffor har inte tre olika produktbilder (bara två), hur gör man då?????
     });
 
-
-    //sortera knapp
-    $(".sort-button").click(function () {
-        $(".dropdown-content").css("display", "block");
-        $("fas fa-chevron-down").toggleClass("fas fa-chevron-up"); //Vill byta ikonen här...
+    //Dropdown meny med färgalternativ produktsida
+    $(".color-button").click(function () {
+        $(".dropdown-color-content").slideDown(200);
+        $(this).find("i").removeClass("fas fa-chevron-down").addClass("fas fa-chevron-up"); //ändrar pilen
     });
 
     //Visa meny
@@ -64,7 +67,6 @@ $("document").ready(function () {
         $(".side-menu").animate({
             width: 'toggle'
         });
-
     });
 
     //Göm meny
