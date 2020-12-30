@@ -38,9 +38,8 @@ $("document").ready(function () {
         $("#image-3").attr("src", $(this).attr("src").replace());
         $("#color-1").attr("src", $(".main-image img").attr("src"));
         $("#color-2").attr("src");
-
-        //Försöker få så produktnamnet hamnar på produktsidan, på h3 taggen... (blir sen samma för thumbnail)
-        $(".product-information").attr("h3", $(".product-name").attr("h3"));
+        $(".product-information").children("h3").text($(this).siblings().children("h3").text());
+        $(".product-information").children("p").text($(this).siblings().children(".price").text());
     });
 
     /* När man klickar på miniatyrbilden på kategorisidan hamnar den bilden på produktsidan */
@@ -52,7 +51,8 @@ $("document").ready(function () {
         $("#image-1").attr("src", $(this).attr("src").replace());
         $("#image-2").attr("src", $(this).attr("src").replace(".jpg", "-profil.jpg"));
         $("#image-3").attr("src", $(this).attr("src").replace(".jpg", "-rum.jpg"));
-
+        $(".product-information").children("h3").text($(this).siblings().children("h3").text());
+        $(".product-information").children("p").text($(this).siblings().children(".price").text());
         //FRÅGA: Vissa soffor har inte tre olika produktbilder (bara två), hur gör man då?????
     });
 
