@@ -12,28 +12,17 @@
 </head>
 
 <body>
+
+
+  <!-- Start of navigation -->
   <nav>
-    <div class="side-menu" id="slide">
-
-      <div class="menu-information">
-        <h3>Välj en kategori</h3>
-        <h1 id="hide">&times;</h1>
-      </div>
-
-      <div class="menu-links">
-        <ul>
-        <li><a href="#">Länk 1</a></li>
-        <li><a href="#">Länk 2</a></li>
-        <li><a href="#">Länk 3</a></li>
-        <li><a href="#">Länk 4</a></li>
-        </ul>
-      </div>
-
-    </div>
 
     <div class="nav-left">
-      <i class="fas fa-bars fa-2x" id="menu-icon"></i>
-
+      
+      <span id="show-menu">
+        <i class="fas fa-bars fa-2x"></i>
+      </span>
+      
       <form>
         <input type="text" placeholder="Produktsök">
       </form>
@@ -47,18 +36,28 @@
       <i class="fas fa-shopping-bag fa-2x" id="shopping-icon"></i>
     </div>
 
-    <div class="shopping-cart">
+  </nav>
+  <!-- End of navigation -->
 
-      <div class="shopping-cart-information">
-        <h1 id="hide-cart">&times;</h1>
-        <h3>Valda produkter</h3>
-      </div>
+  <!-- Slide menu -->
 
+  <div class="side-menu">
+
+    <div class="menu-information">
+      <h3>Välj en kategori</h3>
+      <h1 id="hide">&times;</h1>
     </div>
 
+  </div>
 
-  </nav>
+  <div class="shopping-cart">
 
+    <div class="menu-information">
+      <h3>Välj en kategori</h3>
+      <h1 id="hide">&times;</h1>
+    </div>
+
+  </div>
 
 
   <main>
@@ -339,13 +338,18 @@
           <p>Pris</p>
           <div class="dropdown-color">
             <button class="color-button">
-              Tillgängliga färger   
+              Tillgängliga färger
               <i class="fas fa-chevron-down"></i>
             </button>
             <div class="dropdown-color-content">
               <a href="#"><img class="thumbnail-color-image" id="color-1" alt="" src=""></a>
               <a href="#"><img class="thumbnail-color-image" id="color-2" alt="" src=""></a>
             </div>
+          </div>
+          <div class="quantity">
+            <i class="fas fa-minus" id="decrease"></i>
+            <p id="output" default="1">1</p>
+            <i class="fas fa-plus" id="increase"></i>
           </div>
           <button class="add-button">Lägg till i varukorg<i class="fas fa-chevron-right"></i></button>
         </div>

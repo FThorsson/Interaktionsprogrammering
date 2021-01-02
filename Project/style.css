@@ -6,6 +6,8 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 nav {
@@ -18,51 +20,6 @@ nav {
     position: sticky;
     top: 0;
     background-color: white;
-}
-
-.side-menu {
-    position: absolute;
-    display: flex;
-    display: none;
-    height: 75vh;
-    width: 14.3%;
-    margin-top: 85vh;
-    box-shadow: 4px 0px 2px -2px lightgray;
-}
-
-#menu-icon {
-    cursor: pointer;
-}
-
-#hide {
-    cursor: pointer;
-    color: black;
-    margin-left: auto;
-}
-
-.menu-information {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-}
-
-.menu-links {
-    display: flex;
-    flex-direction: column;
-    justify-items: start;
-}
-
-.menu-links li {
-    padding-left: 20px;
-    padding-bottom: 15px;
-    font-size: 18px;
-    
-}
-
-.menu-links a {
-    color: black;
-    text-decoration: none;
 }
 
 .nav-left {
@@ -105,16 +62,29 @@ input[type=text] {
     height: 100%;
     justify-content: flex-end;
     align-items: center;
-    padding-right: 20px;
+    padding-right: 40px;
+}
+
+.side-menu {
+    position: absolute;
+    height: 75vh;
+    width: 14.3%;
+    left: -14.3%;
+    background-color: lightcoral;
+    box-shadow: 4px 0px 2px -2px lightgray;
+    transition: ease-out 500ms;
+}
+
+.side-menu--open {
+    left: 0;
+    transition: ease-in 500ms;
 }
 
 .shopping-cart {
     position: absolute;
-    margin-left: auto;
     height: 75vh;
-    width: 14.3%;
-    margin-top: 85vh;
-    margin-left: 85.7%;
+    width: 20%;
+    margin-left: 80%;
     background-color: lightcoral;
 }
 
@@ -376,7 +346,7 @@ input[type=text] {
     cursor: pointer;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     text-align: center;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .fa-chevron-down {
@@ -391,12 +361,30 @@ input[type=text] {
     margin-left: 10px;
 }
 
+.quantity {
+    display: flex;
+    padding-top: 15px;
+    justify-content: left;
+    align-items: left;
+    flex-direction: row;
+}
+
+.fa-minus {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.fa-plus {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 footer {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     height: 15vh;
+    width: 100%;
     background-color: rgb(1, 31, 75, 0.65);
     margin-top: 15px;
 }
