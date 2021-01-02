@@ -30,6 +30,7 @@ $("document").ready(function () {
     /* När man klickar på produktbild på kategorisidan hamnar den bilden på produktsidan */
     $(".product-image").click(function () {
         $("#image-1").addClass("active").siblings().removeClass("active");
+        $(".main-page").css("display", "none");
         $(".category-page").css("display", "none");
         $(".product-page").css("display", "block");
         $(".main-image img").attr("src", $(this).attr("src").replace("-rum.jpg", ".jpg"));
@@ -46,6 +47,7 @@ $("document").ready(function () {
     /* När man klickar på miniatyrbilden på kategorisidan hamnar den bilden på produktsidan */
     $(".thumbnail-color").click(function () {
         $("#image-1").addClass("active").siblings().removeClass("active");
+        $(".main-page").css("display", "none");
         $(".category-page").css("display", "none");
         $(".product-page").css("display", "block");
         $(".main-image img").attr("src", $(this).attr("src").replace());
@@ -100,10 +102,23 @@ $("document").ready(function () {
     $(".add-button").click(function () {
         /* Lägger till i kundkorgen, måste kolla vald produkt (namn, pris), 
         valt antal, hämta produktbild - Koppla till det som visas i kundkorgen */
-    })
+    });
 
     $("#show-menu").click(function () {
         $(".side-menu").toggleClass("side-menu--open");
+    });
+
+    $("#arrow").click(function () {
+        $(".side-menu").toggleClass("side-menu--open");
+    });
+
+    $("#show-cart").click(function () {
+        $(".shopping-cart").toggleClass("shopping-cart--open");
+
+    });
+
+    $(".filter-button").click(function () {
+        $(".filter-menu").toggleClass("filter-menu--open");
     });
 
 });

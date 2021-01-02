@@ -18,11 +18,11 @@
   <nav>
 
     <div class="nav-left">
-      
+
       <span id="show-menu">
         <i class="fas fa-bars fa-2x"></i>
       </span>
-      
+
       <form>
         <input type="text" placeholder="Produktsök">
       </form>
@@ -33,30 +33,80 @@
     </div>
 
     <div class="nav-right">
-      <i class="fas fa-shopping-bag fa-2x" id="shopping-icon"></i>
+      <span id="show-cart">
+        <i class="fas fa-shopping-bag fa-2x" id="shopping-icon"></i>
+      </span>
     </div>
 
   </nav>
   <!-- End of navigation -->
 
-  <!-- Slide menu -->
+  <!-- Side menu -->
 
   <div class="side-menu">
 
     <div class="menu-information">
-      <h3>Välj en kategori</h3>
-      <h1 id="hide">&times;</h1>
-    </div>
 
+      <div class="links">
+        <ul class="menu-links">
+          <li><a href="#">Tvåsitssoffor</a></li>
+          <li><a href="#">Tresitssoffor</a></li>
+          <li><a href="#">Hörnsoffor</a></li>
+          <li><a href="#">Bäddsoffor</a></li>
+          <li><a href="#">Soffgrupper</a></li>
+          <li><a href="#">Outlet</a></li>
+          <li><a href="#">Inspiration</a></li>
+        </ul>
+
+        <div class="chevron" id="arrow">
+          <i class="fas fa-chevron-left fa-3x"></i>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="shopping-cart">
 
     <div class="menu-information">
       <h3>Välj en kategori</h3>
-      <h1 id="hide">&times;</h1>
     </div>
 
+  </div>
+
+  <div class="filter-menu">
+    <div class="filter-options">
+      <h3>Filtrera</h3>
+      <div class="filter-color">
+        <p>Färg</p>
+        <div class="color-options">
+          <div class="color-circle" id="white"></div>
+          <div class="color-circle" id="beige"></div>
+          <div class="color-circle" id="pink"></div>
+          <div class="color-circle" id="orange"></div>
+          <div class="color-circle" id="blue"></div>
+        </div>
+        <div class="color-options">
+          <div class="color-circle" id="green"></div>
+          <div class="color-circle" id="yellow"></div>
+          <div class="color-circle" id="brown"></div>
+          <div class="color-circle" id="gray"></div>
+          <div class="color-circle" id="black"></div>
+        </div>
+      </div>
+      <div class="filter-price">
+        <p>Pris</p>
+        <div class="slidecontainer">
+          <input type="range" min="1" max="100000" value="100000" class="slider" id="price-slider">
+        </div>
+        <div class="price-text">
+          <p class="price-min">0kr</p>
+          <p class="price-max">100.000kr</p>
+        </div>
+      </div>
+      <div class="filter-brand">
+
+      </div>
+    </div>
   </div>
 
 
