@@ -49,7 +49,7 @@
 
       <div class="links">
         <ul class="menu-links">
-          <li><a href="#">Tvåsitssoffor</a></li>
+          <li><a class="category-1" href="#">Tvåsitssoffor</a></li>
           <li><a href="#">Tresitssoffor</a></li>
           <li><a href="#">Hörnsoffor</a></li>
           <li><a href="#">Bäddsoffor</a></li>
@@ -96,19 +96,40 @@
       <div class="filter-price">
         <p>Pris</p>
         <div class="slidecontainer">
-          <input type="range" min="1" max="100000" value="100000" class="slider" id="price-slider">
+          <input class="slider" id="price-slider" type="range" min="0" max="50000" value="50000" step="1">
         </div>
         <div class="price-text">
-          <p class="price-min">0kr</p>
-          <p class="price-max">100.000kr</p>
+          <p class="price-min">0 - </p>
+          <p class="price-max">50000</p>
+          <p>kr</p>
         </div>
       </div>
       <div class="filter-brand">
-
+        <p>Märken</p>
+        <div>
+          <input type="checkbox" id="brand1" name="brand1">
+          <label for="brand1">Märke1</label>
+        </div>
+        <div>
+          <input type="checkbox" id="brand2" name="brand2">
+          <label for="brand2">Märke2</label>
+        </div>
+        <div>
+          <input type="checkbox" id="brand3" name="brand3">
+          <label for="brand3">Märke3</label>
+        </div>
+        <div>
+          <input type="checkbox" id="brand4" name="brand4">
+          <label for="brand4">Märke4</label>
+        </div>
+        <div>
+          <input type="checkbox" id="brand5" name="brand5">
+          <label for="brand5">Märke5</label>
+        </div>
       </div>
+      <div class="save-filter">Filtrera</div>
     </div>
   </div>
-
 
   <main>
     <!-- Main page -->

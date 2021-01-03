@@ -121,4 +121,16 @@ $("document").ready(function () {
         $(".filter-menu").toggleClass("filter-menu--open");
     });
 
+    $(".slider").on("change", function (){
+        let priceValue = $(this).val();
+        $(".price-max").text(priceValue);
+    });
+
+    $(".category-1").click(function() {
+        $(".main-page").css("display", "none");
+        $(".product-page").css("display", "none");
+        $(".category-page").css("display", "block");
+        //Fixa så menyn glider tillbaka också efter man klickat
+    })
+
 });
