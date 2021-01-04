@@ -21,6 +21,19 @@ $("document").ready(function () {
         $(this).find("i").removeClass("fas fa-chevron-down").addClass("fas fa-chevron-up"); //ändrar pilen
     });
 
+    $(".popular-sort").click(function() {
+        //Visa alla produkter i den "ordinarie" ordningen
+    });
+
+    $(".lowest-price-sort").click(function() {
+        //Visa produkter i stigande prisordning
+        $()
+    });
+
+    $(".highest-price-sort").click(function() {
+        //Visa produkter i stigande prisordning
+    });
+
     //Ändrar bilden som man klickar på, på produktsidan
     $(".thumbnail-image").click(function () {
         $(this).addClass("active").siblings().removeClass("active");
@@ -59,7 +72,6 @@ $("document").ready(function () {
         $(".product-information").children("h3").text($(this).siblings().children("h3").text());
         $(".product-information").children("p").text($(this).siblings().children(".price").text());
         $("#output").text($("#output").attr("default"));
-        //FRÅGA: Vissa soffor har inte tre olika produktbilder (bara två), hur gör man då?????
     });
 
     //Dropdown meny med färgalternativ produktsida
@@ -130,7 +142,7 @@ $("document").ready(function () {
         $(".main-page").css("display", "none");
         $(".product-page").css("display", "none");
         $(".category-page").css("display", "block");
-        //Fixa så menyn glider tillbaka också efter man klickat
-    })
+        $(".side-menu").toggleClass("side-menu--open");
+    });
 
 });

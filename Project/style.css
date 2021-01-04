@@ -145,7 +145,6 @@ input[type=text] {
 }
 
 .offer-container {
-    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -170,6 +169,7 @@ input[type=text] {
     align-items: center;
     flex-direction: row;
     padding-top: 10px;
+    margin-bottom: 50px;
 }
 
 .image-box {
@@ -223,6 +223,7 @@ input[type=text] {
     flex-direction: column;
     margin: auto;
     width: 750px;
+    margin-top: 50px;
 }
 
 .button-container {
@@ -249,8 +250,11 @@ input[type=text] {
     height: 75vh;
     width: 14.3%;
     left: -14.3%;
-    box-shadow: 4px 0px 2px -2px lightgray;
     transition: ease-out 500ms;
+}
+
+.filter-wrapper {
+    position: relative;
 }
 
 .filter-menu--open {
@@ -361,6 +365,7 @@ input {
 }
 
 .save-filter {
+    position: absolute;
     background-color: rgba(10, 50, 109, 0.65);
     width: 100%;
     height: 5vh;
@@ -368,6 +373,7 @@ input {
     color: white;
     font-weight: bold;
     padding: 10px;
+    bottom: 0;
 }
 
 .sort-button {
@@ -413,6 +419,7 @@ input {
     justify-content: center;
     align-items: center;
     padding-top: 10px;
+    margin-bottom: 50px;
     flex-direction: column;
 }
 

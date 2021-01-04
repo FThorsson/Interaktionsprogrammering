@@ -74,60 +74,62 @@
   </div>
 
   <div class="filter-menu">
-    <div class="filter-options">
-      <h3>Filtrera</h3>
-      <div class="filter-color">
-        <p>Färg</p>
-        <div class="color-options">
-          <div class="color-circle" id="white"></div>
-          <div class="color-circle" id="beige"></div>
-          <div class="color-circle" id="pink"></div>
-          <div class="color-circle" id="orange"></div>
-          <div class="color-circle" id="blue"></div>
+    <div class="filter-wrapper">
+      <div class="filter-options">
+        <h3>Filtrera</h3>
+        <div class="filter-color">
+          <p>Färg</p>
+          <div class="color-options">
+            <div class="color-circle" id="white"></div>
+            <div class="color-circle" id="beige"></div>
+            <div class="color-circle" id="pink"></div>
+            <div class="color-circle" id="orange"></div>
+            <div class="color-circle" id="blue"></div>
+          </div>
+          <div class="color-options">
+            <div class="color-circle" id="green"></div>
+            <div class="color-circle" id="yellow"></div>
+            <div class="color-circle" id="brown"></div>
+            <div class="color-circle" id="gray"></div>
+            <div class="color-circle" id="black"></div>
+          </div>
         </div>
-        <div class="color-options">
-          <div class="color-circle" id="green"></div>
-          <div class="color-circle" id="yellow"></div>
-          <div class="color-circle" id="brown"></div>
-          <div class="color-circle" id="gray"></div>
-          <div class="color-circle" id="black"></div>
+        <div class="filter-price">
+          <p>Pris</p>
+          <div class="slidecontainer">
+            <input class="slider" id="price-slider" type="range" min="0" max="50000" value="50000" step="1">
+          </div>
+          <div class="price-text">
+            <p class="price-min">0 - </p>
+            <p class="price-max">50000</p>
+            <p>kr</p>
+          </div>
         </div>
+        <div class="filter-brand">
+          <p>Märken</p>
+          <div>
+            <input type="checkbox" id="brand1" name="brand1">
+            <label for="brand1">Märke1</label>
+          </div>
+          <div>
+            <input type="checkbox" id="brand2" name="brand2">
+            <label for="brand2">Märke2</label>
+          </div>
+          <div>
+            <input type="checkbox" id="brand3" name="brand3">
+            <label for="brand3">Märke3</label>
+          </div>
+          <div>
+            <input type="checkbox" id="brand4" name="brand4">
+            <label for="brand4">Märke4</label>
+          </div>
+          <div>
+            <input type="checkbox" id="brand5" name="brand5">
+            <label for="brand5">Märke5</label>
+          </div>
+        </div>
+        <div class="save-filter">Filtrera</div>
       </div>
-      <div class="filter-price">
-        <p>Pris</p>
-        <div class="slidecontainer">
-          <input class="slider" id="price-slider" type="range" min="0" max="50000" value="50000" step="1">
-        </div>
-        <div class="price-text">
-          <p class="price-min">0 - </p>
-          <p class="price-max">50000</p>
-          <p>kr</p>
-        </div>
-      </div>
-      <div class="filter-brand">
-        <p>Märken</p>
-        <div>
-          <input type="checkbox" id="brand1" name="brand1">
-          <label for="brand1">Märke1</label>
-        </div>
-        <div>
-          <input type="checkbox" id="brand2" name="brand2">
-          <label for="brand2">Märke2</label>
-        </div>
-        <div>
-          <input type="checkbox" id="brand3" name="brand3">
-          <label for="brand3">Märke3</label>
-        </div>
-        <div>
-          <input type="checkbox" id="brand4" name="brand4">
-          <label for="brand4">Märke4</label>
-        </div>
-        <div>
-          <input type="checkbox" id="brand5" name="brand5">
-          <label for="brand5">Märke5</label>
-        </div>
-      </div>
-      <div class="save-filter">Filtrera</div>
     </div>
   </div>
 
@@ -146,7 +148,7 @@
 
         <div class="image-box">
           <div class="image-details">
-            <img class="product-image" alt="" default="./images/soffa1-gray.jpg" src="./images/soffa1-gray.jpg">
+            <img class="product-image" alt="" img1="soffa1-gray1" img2="" default="./images/soffa1-gray.jpg" src="./images/soffa1-gray.jpg">
             <img class="thumbnail-color" alt="" src="./images/soffa1-green.jpg">
             <div class="description">
               <h3>Noelia</h3>
@@ -221,9 +223,9 @@
               <i class="fas fa-chevron-down"></i>
             </button>
             <div class="dropdown-content">
-              <a href="#">Populärt</a>
-              <a href="#">Lägsta pris</a>
-              <a href="#">Högsta pris</a>
+              <a class="popular-sort" href="#">Populärt</a>
+              <a class="lowest-price-sort" href="#">Lägsta pris</a>
+              <a class="highest-price-sort" href="#">Högsta pris</a>
             </div>
           </div>
         </div>
