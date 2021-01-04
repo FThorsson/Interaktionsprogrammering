@@ -64,13 +64,14 @@
       </div>
     </div>
   </div>
-
+  <div class="shopping-cart-wrapper">
   <div class="shopping-cart">
-
-    <div class="menu-information">
-      <h3>Välj en kategori</h3>
+    
+      <div class="menu-information">
+        <h3 class="cart-text">Din varukorg är tom!</h3>
+        <div class="checkout-button">Till kassan</div>
+      </div>
     </div>
-
   </div>
 
   <div class="filter-menu">
@@ -148,7 +149,7 @@
 
         <div class="image-box">
           <div class="image-details">
-            <img class="product-image" alt="" img1="soffa1-gray1" img2="" default="./images/soffa1-gray.jpg" src="./images/soffa1-gray.jpg">
+            <img class="product-image" alt="" default="./images/soffa1-lila.jpg" src="./images/soffa1-lila.jpg">
             <img class="thumbnail-color" alt="" src="./images/soffa1-green.jpg">
             <div class="description">
               <h3>Noelia</h3>
@@ -206,12 +207,13 @@
 
     <!-- Category page  -->
     <div class="category-page">
+      <div class="back-start-button">
+        <i class="fas fa-chevron-left"></i>
+        <p>Tillbaka till startsida</p>
+      </div>
       <div class="information-container">
-        <h3>Kategori</h3>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum consequuntur exercitationem eos cumque
-          impedit repellendus similique asperiores alias maxime sit ratione quae iure, commodi at eligendi nemo
-          distinctio atque ipsa.
-        </p>
+        <h3>Tvåsittssoffor</h3>
+        <p>Visar 1800st stilsäkra produkter</p>
         <div class="button-container">
           <button class="filter-button">
             Filtrera
@@ -235,7 +237,7 @@
         <div class="product-row">
           <div class="image-box">
             <div class="image-details">
-              <img class="product-image" alt="" default="./images/soffa1-gray.jpg" src="./images/soffa1-gray.jpg">
+              <img class="product-image" alt="" default="./images/soffa1-lila.jpg" src="./images/soffa1-lila.jpg">
               <img class="thumbnail-color" alt="" src="./images/soffa1-green.jpg">
               <div class="description">
                 <h3>Noelia</h3>
@@ -298,7 +300,7 @@
           <div class="image-box">
             <div class="image-details">
               <img class="product-image" alt="" default="./images/soffa7-gray.jpg" src="./images/soffa7-gray.jpg">
-              <img class="thumbnail-color" alt="" src="./images/soffa7-lightgreen.jpg">
+              <img class="thumbnail-color" alt="" src="./images/soffa7-beige.jpg">
               <div class="description">
                 <h3>Gordon</h3>
                 <p class="price">4 995:-</p>
@@ -307,7 +309,7 @@
           </div>
           <div class="image-box">
             <div class="image-details">
-              <img class="product-image" alt="" default="./images/soffa8-beige.jpg" src="./images/soffa8-beige.jpg">
+              <img class="product-image" alt="" default="./images/soffa8-blue.jpg" src="./images/soffa8-blue.jpg">
               <img class="thumbnail-color" alt="" src="./images/soffa8-gray.jpg">
               <div class="description">
                 <h3>Sand</h3>
@@ -350,8 +352,8 @@
           </div>
           <div class="image-box">
             <div class="image-details">
-              <img class="product-image" alt="" default="./images/soffa12-blue.jpg" src="./images/soffa12-blue.jpg">
-              <img class="thumbnail-color" alt="" src="./images/soffa12-mullvad.jpg">
+              <img class="product-image" alt="" default="./images/soffa13-beige.jpg" src="./images/soffa13-beige.jpg">
+              <img class="thumbnail-color" alt="" src="./images/soffa13-blue.jpg">
               <div class="description">
                 <h3>Vera</h3>
                 <p class="price">4 495:-</p>
@@ -360,8 +362,8 @@
           </div>
           <div class="image-box">
             <div class="image-details">
-              <img class="product-image" alt="" default="./images/soffa13-beige.jpg" src="./images/soffa13-beige.jpg">
-              <img class="thumbnail-color" alt="" src="./images/soffa13-gray.jpg">
+              <img class="product-image" alt="" default="./images/soffa12-blue.jpg" src="./images/soffa12-blue.jpg">
+              <img class="thumbnail-color" alt="" src="./images/soffa12-mullvad.jpg">
               <div class="description">
                 <h3>Holiday</h3>
                 <p class="price">7 559:-</p>
@@ -395,6 +397,10 @@
 
     <!-- Product page -->
     <div class="product-page">
+      <div class="back-button">
+        <i class="fas fa-chevron-left"></i>
+        <p>Tillbaka till kategorisida</p>
+      </div>
       <div class="product-page-content">
         <div class="product-images">
           <div class="main-image">
@@ -415,8 +421,8 @@
               <i class="fas fa-chevron-down"></i>
             </button>
             <div class="dropdown-color-content">
-              <a href="#"><img class="thumbnail-color-image" id="color-1" alt="" src=""></a>
-              <a href="#"><img class="thumbnail-color-image" id="color-2" alt="" src=""></a>
+              <a class="thumbnail-color-image" href="#"><img id="color-1" alt="" src=""></a>
+              <a class="thumbnail-color-image" href="#"><img id="color-2" alt="" src=""></a>
             </div>
           </div>
           <div class="quantity">
