@@ -106,13 +106,53 @@ $("document").ready(function () {
         });
     });
 
-    $(".add-button").click(function () {
-    /* 1. Lägger till i varukorg och varukorg slidear ut och sen tillbaka
-        2. Lägger till vald produkt (bild, namn, pris, antal)
-        3. Totalpris längst ner 
-        4. Lägger till knappar för justering av volym (som på produktsidan) */
-
+    $("#increase-shop").click(function () {
+        $("#output-shop").html(function (i, val) {
+            return val * 1 + 1;
+        });
     });
+
+    $("#decrease-shop").click(function () {
+        $("#output-shop").html(function (i, val) {
+            if (val > 1) {
+                return val * 1 - 1;
+            }
+        });
+        console.log("klIckar på minus i kassan");
+    });
+
+    $(".add-button").click(function () {
+        $(".shopping-cart").toggleClass("shopping-cart--open");
+        $(".shopping-cart").append(`<div class="cart-products">
+                <i class="fas fa-times-circle"></i>
+                <img src="${$(".thumbnail-container").find("img").attr("src")}"></img>
+                <div class="product-info">
+                    <p>${$(".name").text()}</p>
+                    <p>${$(".product-price").text()}</p>
+                    <div class="quantity">
+                        <i class="fas fa-minus" id="decrease-shop"></i>
+                        <p id="output-shop">${$("#output").text()}</p>
+                        <i class="fas fa-plus" id="increase-shop"></i>
+                    </div>
+                </div>
+            </div>`
+        );
+        getTotalAmount();
+        /* $(".total-amount").text($(".product-price").text()); */
+    });
+
+    function getTotalAmount(){
+        let total = 0;
+        $('.product-price').each(function(){
+            total += Number($(this).val());
+        });
+        $('.total-amount').text(total);
+    }
+    
+    $(".fa-times-circle").click(function() {
+        $(".cart-products").empty();
+        console.log("klickar på att ta bort vara");
+    })
 
     $(".back-button").click(function() {
         $(".main-page").css("display", "none");
@@ -166,6 +206,11 @@ $("document").ready(function () {
     $(".save-filter").click(function() {
         $(".filter-menu").toggleClass("filter-menu--open");
     });
-    
+
+    $(".heading").click(function() {
+        $(".main-page").css("display", "block");
+        $(".product-page").css("display", "none");
+        $(".category-page").css("display", "none");
+    })
 
 });
