@@ -138,15 +138,15 @@ $("document").ready(function () {
             </div>`
         );
         getTotalAmount();
-        /* $(".total-amount").text($(".product-price").text()); */
     });
 
-    function getTotalAmount(){
-        let total = 0;
+    let total = 0;
+    function getTotalAmount() {
         $('.product-price').each(function(){
-            total += Number($(this).val());
+            total += parseFloat($(this).text());
+            $('.total-amount').text(total);
+            console.log("räknar ihop totalen");
         });
-        $('.total-amount').text(total);
     }
     
     $(".fa-times-circle").click(function() {

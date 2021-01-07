@@ -81,7 +81,7 @@ input[type=text] {
     position: fixed;
     height: 75vh;
     width: 14.5vw;
-    left: -14.5vw;
+    left: -30vw;
     transition: ease-out 500ms;
 }
 
@@ -328,7 +328,7 @@ input[type=text] {
     position: fixed;
     height: 75vh;
     width: 14.3%;
-    left: -14.3%;
+    left: -25%;
     transition: ease-out 500ms;
 }
 
