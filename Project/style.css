@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -11,7 +13,6 @@ body {
 }
 
 nav {
-    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -62,6 +63,8 @@ input[type=text] {
 }
 
 .heading {
+    font-family: 'Architects Daughter', sans-serif;
+    font-size: 35px;
     cursor: pointer;
 }
 
@@ -80,7 +83,6 @@ input[type=text] {
     width: 14.5vw;
     left: -14.5vw;
     transition: ease-out 500ms;
-    background-color: white;
 }
 
 .side-menu--open {
@@ -90,26 +92,13 @@ input[type=text] {
 
 .menu-information {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
 }
 
 .links {
     display: flex;
-    justify-content: center;
-    align-self: center;
     flex-direction: row;
     margin-top: 50px;
-}
-
-.chevron {
-    display: flex;  
-    justify-content: center;
-    align-items: center;
-    color: lightslategray;
-    cursor: pointer;
-    padding-left: 5px;
 }
 
 .menu-links li {
@@ -118,18 +107,36 @@ input[type=text] {
 }
 
 .menu-links a {
-    display: block;
     text-decoration: none;
     color: black;
     background-color: none;
-    padding: 14px 25px;
+    padding-top: 14px; 
+    padding-bottom: 14px; 
+    padding-left: 25px;
+    padding-right: 100%;
     display: block;
 }
 
 .menu-links a:hover {
     color: white;
     background-color: rgb(1, 31, 75, 0.65);
-    padding: 14px 25px;
+    padding-top: 14px; 
+    padding-bottom: 14px; 
+    padding-left: 25px;
+    padding-right: 100%;
+}
+
+.close-side-menu { 
+    position: absolute;
+    background-color: rgba(10, 50, 109, 0.65);
+    width: 100%;
+    height: 5vh;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    bottom: 0;
+    cursor: pointer;
 }
 
 .shopping-cart-wrapper {
@@ -199,13 +206,15 @@ input[type=text] {
     cursor: pointer;
 }
 
+.main-page {
+    position: relative;
+}
 .offer-container {
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin: auto;
     width: 700px;
-    z-index: -10;
 }
 
 .offer-image {
@@ -228,6 +237,7 @@ input[type=text] {
 }
 
 .image-box {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -280,18 +290,17 @@ input[type=text] {
 }
 
 .back-start-button:hover {
-    color:rgb(0, 67, 122);
+    color: rgb(0, 67, 122);
 }
 
 .information-container {
     display: flex;
     justify-content: left;
     align-items: left;
-    padding-top: 5px;
     flex-direction: column;
     margin: auto;
     width: 750px;
-    margin-top: 10px;
+    margin-top: 50px;
 }
 
 .button-container {
@@ -311,6 +320,8 @@ input[type=text] {
     cursor: pointer;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .filter-menu {
@@ -319,11 +330,11 @@ input[type=text] {
     width: 14.3%;
     left: -14.3%;
     transition: ease-out 500ms;
-    background-color: white;;
 }
 
 .filter-wrapper {
     position: relative;
+    height: 100%;
 }
 
 .filter-menu--open {
@@ -331,77 +342,91 @@ input[type=text] {
     transition: ease-in 500ms;
 }
 
-.filter-options {
-    height: 70vh;
-}
-
 .filter-options h3 {
-    margin: 5px;
+    padding-top: 30px;
+    padding-left: 20px;
 }
 
 .filter-color {
-    margin: 5px;
-    padding-top: 10px;
+    padding: 20px;
+}
+
+.filter-color p {
+    padding-bottom: 25px;
 }
 
 .color-options {
-    display:flex;
+    display: flex;
     flex-direction: row;
     justify-content: left;
     align-items: left;
+    padding-bottom: 10px;
 }
 
-.color-circle {
-    margin: 5px;
-    border-radius: 50%;
-    border: solid 1px rgb(206, 206, 206);
-    width: 25px;
-    height: 25px;
-}
+#light-coral {
+    color: lightcoral;
+    padding-right: 15px;
+    cursor: pointer;
 
-#white {
-    background-color: white;
 }
 
 #beige {
-    background-color: beige;
+    color: beige;
+    padding-right: 15px;
+    cursor: pointer;
 }
 
 #pink {
-    background-color: rgb(237, 151, 240);
+    color: rgb(237, 151, 240);
+    padding-right: 15px;
+    cursor: pointer;
 }
 
 #orange {
-    background-color: orange;
+    color: orange;
+    padding-right: 15px;
+    cursor: pointer;
 }
 
 #blue {
-    background-color: rgb(0, 140, 255);
+    color: rgb(0, 140, 255);
+    padding-right: 15px;
+    cursor: pointer;
 }
 
 #green {
-    background-color: rgb(48, 177, 48);
+    color: rgb(48, 177, 48);
+    padding-right: 15px;
+    cursor: pointer;
 }
 
 #yellow {
-    background-color: rgb(255, 255, 0);
+    color: rgb(255, 255, 0);
+    padding-right: 15px;
+    cursor: pointer;
 }
 
 #brown {
-    background-color: rgb(102, 64, 64);
+    color: rgb(102, 64, 64);
+    padding-right: 15px;
+    cursor: pointer;
 }
 
 #gray {
-    background-color: gray;
+    color: gray;
+    padding-right: 15px;
+    cursor: pointer;
 }
 
 #black {
-    background-color: black;
+    color: black;
+    padding-right: 15px;
+    cursor: pointer;
 }
 
 .filter-price {
-    margin: 10px;
-    padding-top: 10px;
+    padding-top: 20px;
+    padding-left: 20px;
 }
 
 .slidecontainer {
@@ -416,12 +441,14 @@ input[type=text] {
     -webkit-transition: .2s;
     transition: opacity .2s;
     color: black;
+    margin: 0;
 }
 
-.price-text{
+.price-text {
     display: flex;
     flex-direction: row;
     width: 100%;
+    padding-bottom: 20px;
 }
 
 .seperation-line {
@@ -431,12 +458,12 @@ input[type=text] {
 }
 
 .filter-brand {
-    margin: 10px;
-    padding-top: 10px;
+    padding-left: 20px;
+    padding-top: 20px;
 }
 
-input {
-    margin: .4rem;
+.filter-brand p {
+    padding-bottom: 10px;
 }
 
 .save-filter {
@@ -462,6 +489,8 @@ input {
     cursor: pointer;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .dropdown-sort {
@@ -479,7 +508,7 @@ input {
 }
 
 .show-sort {
-    display:block;
+    display: block;
 }
 
 .dropdown-content a {
@@ -525,7 +554,7 @@ input {
 }
 
 .back-button:hover {
-    color:rgb(0, 67, 122);
+    color: rgb(0, 67, 122);
 }
 
 .fa-chevron-left {
@@ -603,7 +632,7 @@ input {
 }
 
 .show-dropdown-color-content {
-    display:block;
+    display: block;
 }
 
 .dropdown-color-content {
@@ -615,7 +644,7 @@ input {
 }
 
 .show-dropdown-color-content {
-    display:block;
+    display: block;
 }
 
 .dropdown-color-content a {
@@ -695,6 +724,7 @@ footer {
     width: 100%;
     background-color: rgb(1, 31, 75, 0.65);
     margin-top: 15px;
+    padding: 0;
 }
 
 .social-media {
