@@ -144,7 +144,7 @@ $("document").ready(function () {
     function getTotalAmount() {
         $('.product-price').each(function(){
             total += parseFloat($(this).text());
-            $('.total-amount').text(total);
+            $('.total-price').text(total);
             console.log("räknar ihop totalen");
         });
     }
