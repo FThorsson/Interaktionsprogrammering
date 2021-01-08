@@ -33,6 +33,7 @@
     </div>
 
     <div class="nav-right">
+      <p id="display-amount"></p>
       <span id="show-cart">
         <i class="fas fa-shopping-bag fa-2x" id="shopping-icon"></i>
       </span>
@@ -50,22 +51,22 @@
       <div class="links">
         <ul class="menu-links">
           <li><a class="category-1" href="#">Tvåsitssoffor</a></li>
-          <li><a href="#">Tresitssoffor</a></li>
-          <li><a href="#">Hörnsoffor</a></li>
-          <li><a href="#">Bäddsoffor</a></li>
-          <li><a href="#">Soffgrupper</a></li>
-          <li><a href="#">Divaner</a></li>
-          <li><a href="#">Outlet</a></li>
+          <li><a class="category-1"href="#">Tresitssoffor</a></li>
+          <li><a class="category-1"href="#">Hörnsoffor</a></li>
+          <li><a class="category-1"href="#">Bäddsoffor</a></li>
+          <li><a class="category-1"href="#">Soffgrupper</a></li>
+          <li><a class="category-1"href="#">Divaner</a></li>
+          <li><a class="category-1"href="#">Outlet</a></li>
           <br>
           <div class="seperation-line"></div>
           <br>
-          <li><a href="#">Sociala medier</a></li>
+          <li><a href="https://www.instagram.com/fredrikthorsson/" target="_blank">Sociala medier</a></li>
           <li><a href="#">Inspiration </a></li>
         </ul>
 
         
 
-        <div class="close-side-menu">
+        <div class="close-side-menu" id="toggle-side-menu">
           <p>Stäng meny</p>
         </div>
       </div>
@@ -78,7 +79,6 @@
       <div class="menu-information">
         <h3 class="cart-text">Varukorg</h3>
         <div class="total-amount">
-          <p>Totalt: </p> 
           <p class="total-price">0</p> 
           <p>:-</p>
         </div>
@@ -110,6 +110,7 @@
             <i class="fas fa-circle fa-2x" id="black"></i>
           </div>
         </div>
+        <div class="seperation-line"></div>
         <div class="filter-price">
           <p>Pris</p>
           <div class="slidecontainer">
@@ -242,23 +243,23 @@
 
     <!-- Category page  -->
     <div class="category-page">
-     <!--  <div class="back-start-button">
+      <div class="back-start-button">
         <i class="fas fa-chevron-left"></i>
         <p>Tillbaka till startsida</p>
-      </div> -->
+      </div>
       <div class="information-container">
         <h3>Tvåsittssoffor</h3>
         <p>Visar 1800st stilsäkra produkter</p>
         <div class="button-container">
-          <button class="filter-button">
+          <div class="filter-button">
             Filtrera
             <i class="fas fa-filter"></i>
-          </button>
+          </div>
           <div class="dropdown-sort">
-            <button class="sort-button">
+            <div class="sort-button">
               Sortera
               <i class="fas fa-chevron-down"></i>
-            </button>
+            </div>
             <div class="dropdown-content">
               <a class="popular-sort" href="#">Populärt</a>
               <a class="lowest-price-sort" href="#">Lägsta pris</a>
@@ -496,10 +497,10 @@
           <h3 class="name">Produktnamn</h3>
           <p class="product-price">Pris</p>
           <div class="dropdown-color">
-            <button class="color-button">
+            <div class="color-button">
               Tillgängliga färger
               <i class="fas fa-chevron-down"></i>
-            </button>
+            </div>
             <div class="dropdown-color-content">
               <a class="thumbnail-color-image" href="#"><img id="color-1" alt="" src=""></a>
               <a class="thumbnail-color-image" href="#"><img id="color-2" alt="" src=""></a>
@@ -510,7 +511,7 @@
             <p id="output" default="1">1</p>
             <i class="fas fa-plus" id="increase"></i>
           </div>
-          <button class="add-button">Lägg till i varukorg<i class="fas fa-chevron-right"></i></button>
+          <div class="add-button">Lägg till i varukorg<i class="fas fa-chevron-right"></i></div>
         </div>
       </div>
     </div>
@@ -526,7 +527,7 @@
       </ul>
     </div>
     <div class="social-media">
-      <i class="fab fa-facebook fa-3x" id="facebook"></i>
+      <a href="https://www.linkedin.com/in/jessica-s%C3%B6dereng/" target="_blank"><i class="fab fa-facebook fa-3x" id="facebook"></i></a>
       <i class="fab fa-instagram fa-3x" id="instagram"></i>
       <i class="fab fa-twitter-square fa-3x" id="twitter"></i>
     </div>

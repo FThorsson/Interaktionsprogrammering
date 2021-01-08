@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 * {
     padding: 0;
     margin: 0;
@@ -7,7 +6,7 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Lato', sans-serif;
     width: 100vw;
     overflow-x: hidden;
 }
@@ -77,12 +76,21 @@ input[type=text] {
     padding-right: 40px;
 }
 
+#display-amount {
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgba(10, 50, 109, 0.65);
+}
+
 .side-menu {
     position: fixed;
     height: 75vh;
     width: 14.5vw;
     left: -30vw;
     transition: ease-out 500ms;
+    z-index: 250;
+    background-color: white; 
 }
 
 .side-menu--open {
@@ -95,38 +103,44 @@ input[type=text] {
     flex-direction: column;
 }
 
+.menu-information ul {
+    width: 100%;
+}
+
 .links {
     display: flex;
     flex-direction: row;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .menu-links li {
     list-style: none;
     font-size: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    display: block;
 }
 
 .menu-links a {
     text-decoration: none;
-    color: black;
-    background-color: none;
-    padding-top: 14px; 
-    padding-bottom: 14px; 
-    padding-left: 25px;
-    padding-right: 100%;
     display: block;
+    color: black;
 }
 
-.menu-links a:hover {
-    color: white;
+
+.menu-links li:hover {
     background-color: rgb(1, 31, 75, 0.65);
-    padding-top: 14px; 
-    padding-bottom: 14px; 
-    padding-left: 25px;
-    padding-right: 100%;
+}
+
+.menu-links li:hover a {
+    color: white;
 }
 
 .close-side-menu { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     background-color: rgba(10, 50, 109, 0.65);
     width: 100%;
@@ -151,10 +165,12 @@ input[type=text] {
     box-shadow: -4px 0px 2px -2px lightgray;
     transition: ease-out 500ms;
     background-color: white;
+    z-index: 100;
 }
 
 .cart-text {
-    padding-top: 10px;
+    padding: 35px;
+    font-size: 20px;
 }
 
 .cart-products {
@@ -162,7 +178,8 @@ input[type=text] {
     justify-content: left;
     align-items: center;
     flex-direction: row;
-    margin-left: 25px;
+    margin-left: 35px;
+    z-index: 300;
 }
 
 .product-info {
@@ -186,8 +203,7 @@ input[type=text] {
 .total-amount {
     display: flex;
     flex-direction: row;
-    justify-content: right;
-    align-items: right;
+    justify-content: flex-end;
     position: absolute;
     width: 100%;
     background-color: rgba(189, 189, 189, 0.65);
@@ -197,6 +213,9 @@ input[type=text] {
 }
 
 .checkout-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     background-color: rgba(10, 50, 109, 0.65);
     width: 100%;
@@ -295,7 +314,7 @@ input[type=text] {
     justify-content: left;
     align-items: left;
     padding-top: 20px;
-    padding-left: 55px;
+    padding-left: 20px;
     cursor: pointer;
 }
 
@@ -322,7 +341,10 @@ input[type=text] {
 }
 
 .filter-button {
-    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
     height: 32px;
     border: 1px solid #BDBDBD;
     background-color: white;
@@ -337,9 +359,10 @@ input[type=text] {
 .filter-menu {
     position: fixed;
     height: 75vh;
-    width: 14.3%;
+    width: 16%;
     left: -25%;
     transition: ease-out 500ms;
+    background-color: white;
 }
 
 .filter-wrapper {
@@ -375,62 +398,62 @@ input[type=text] {
 
 #light-coral {
     color: lightcoral;
-    padding-right: 15px;
+    padding-right: 10px;
     cursor: pointer;
 
 }
 
 #beige {
     color: beige;
-    padding-right: 15px;
+    padding-right: 10px;
     cursor: pointer;
 }
 
 #pink {
     color: rgb(237, 151, 240);
-    padding-right: 15px;
+    padding-right: 10px;
     cursor: pointer;
 }
 
 #orange {
     color: orange;
-    padding-right: 15px;
+    padding-right: 10px;
     cursor: pointer;
 }
 
 #blue {
     color: rgb(0, 140, 255);
-    padding-right: 15px;
+    padding-right: 10px;
     cursor: pointer;
 }
 
 #green {
     color: rgb(48, 177, 48);
-    padding-right: 15px;
+    padding-right: 10px;
     cursor: pointer;
 }
 
 #yellow {
     color: rgb(255, 255, 0);
-    padding-right: 15px;
+    padding-right: 10px;
     cursor: pointer;
 }
 
 #brown {
     color: rgb(102, 64, 64);
-    padding-right: 15px;
+    padding-right: 10px;
     cursor: pointer;
 }
 
 #gray {
     color: gray;
-    padding-right: 15px;
+    padding-right: 10px;
     cursor: pointer;
 }
 
 #black {
     color: black;
-    padding-right: 15px;
+    padding-right: 10px;
     cursor: pointer;
 }
 
@@ -477,6 +500,9 @@ input[type=text] {
 }
 
 .save-filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     background-color: rgba(10, 50, 109, 0.65);
     width: 100%;
@@ -490,6 +516,9 @@ input[type=text] {
 }
 
 .sort-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-left: 470px;
     height: 32px;
     width: 200px;
@@ -500,12 +529,13 @@ input[type=text] {
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     text-align: center;
     margin-top: 10px;
-    margin-bottom: 10px;
 }
 
 .dropdown-sort {
     position: relative;
     display: inline-block;
+    z-index: 10;
+
 }
 
 .dropdown-content {
@@ -559,7 +589,7 @@ input[type=text] {
     justify-content: left;
     align-items: left;
     padding-top: 20px;
-    padding-left: 55px;
+    padding-left: 20px;
     cursor: pointer;
 }
 
@@ -625,6 +655,9 @@ input[type=text] {
 }
 
 .color-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 32px;
     width: 200px;
     border: 1px solid #BDBDBD;
@@ -684,6 +717,9 @@ input[type=text] {
 }
 
 .add-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 40px;
     width: 200px;
     border: 1px solid #BDBDBD;

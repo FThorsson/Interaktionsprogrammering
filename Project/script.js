@@ -121,38 +121,63 @@ $("document").ready(function () {
         console.log("klIckar på minus i kassan");
     });
 
+    
     $(".add-button").click(function () {
         $(".shopping-cart").toggleClass("shopping-cart--open");
-        $(".shopping-cart").append(`<div class="cart-products">
-                <i class="fas fa-times-circle"></i>
-                <img src="${$(".thumbnail-container").find("img").attr("src")}"></img>
-                <div class="product-info">
-                    <p>${$(".name").text()}</p>
-                    <p>${$(".product-price").text()}</p>
-                    <div class="quantity">
-                        <i class="fas fa-minus" id="decrease-shop"></i>
-                        <p id="output-shop">${$("#output").text()}</p>
-                        <i class="fas fa-plus" id="increase-shop"></i>
+        // typ en if sats här som kollar om just den redan finns i varukorgen
+        // om den finns summeras den valda vylmen med volymen som redan ligger i kassan och summerar totalpriset
+        // om den inte finns skapar den en ny produkt rad (det som ligger nedan)
+        for (let i = 0; i <= $(".cart-products").length; i++) {
+            
+            if ($(".thumbnail-container").find("img").attr("src") == $(".cart-products").find("img").attr("src")) {
+                /* let amount = $("#output-shop").text();
+                amount += parseFloat($("#output").text()); */
+                getTotalVolume();
+
+            } else {
+            $(".shopping-cart").append(`<div class="cart-products">
+                    <i class="fas fa-times-circle"></i>
+                    <img src="${$(".thumbnail-container").find("img").attr("src")}"></img>
+                    <div class="product-info">
+                        <p>${$(".name").text()}</p>
+                        <p>${$(".product-price").text()}</p>
+                        <div class="quantity">
+                            <i class="fas fa-minus" id="decrease-shop"></i>
+                            <p id="output-shop">${$("#output").text()}</p>
+                            <i class="fas fa-plus" id="increase-shop"></i>
+                        </div>
                     </div>
-                </div>
-            </div>`
-        );
+                </div>`
+            );
+            
+            
+            }
+        }
         getTotalAmount();
+        let displayAmount = $("#output-shop").text();
+        $("#display-amount").append(`<p>${(displayAmount)}</p>`);
     });
 
     let total = 0;
     function getTotalAmount() {
         $('.product-price').each(function(){
-            total += parseFloat($(this).text());
+            total += $("#output-shop").text()*parseFloat($(this).text());
             $('.total-price').text(total);
-            console.log("räknar ihop totalen");
+        });
+    }
+
+    let amount = 0;
+    function getTotalVolume() {
+        $('#output-shop').each(function(){
+            amount += parseFloat($("#output").text());
+            $("#output-shop").text(amount);
         });
     }
     
     $(".fa-times-circle").click(function() {
         $(".cart-products").empty();
         console.log("klickar på att ta bort vara");
-    })
+    });
 
     $(".back-button").click(function() {
         $(".main-page").css("display", "none");
@@ -181,7 +206,7 @@ $("document").ready(function () {
         $(".category-page").css("display", "none");
     });
 
-    $("#arrow").click(function () {
+    $("#toggle-side-menu").click(function () {
         $(".side-menu").toggleClass("side-menu--open");
     });
 
@@ -212,5 +237,7 @@ $("document").ready(function () {
         $(".product-page").css("display", "none");
         $(".category-page").css("display", "none");
     })
+
+    
 
 });
