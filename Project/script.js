@@ -130,9 +130,11 @@ $("document").ready(function () {
         for (let i = 0; i <= $(".cart-products").length; i++) {
             
             if ($(".thumbnail-container").find("img").attr("src") == $(".cart-products").find("img").attr("src")) {
+                console.log("Hejsan");
                 /* let amount = $("#output-shop").text();
                 amount += parseFloat($("#output").text()); */
-                getTotalVolume();
+                
+                /* getTotalVolume(); */
 
             } else {
             $(".shopping-cart").append(`<div class="cart-products">
@@ -143,14 +145,12 @@ $("document").ready(function () {
                         <p>${$(".product-price").text()}</p>
                         <div class="quantity">
                             <i class="fas fa-minus" id="decrease-shop"></i>
-                            <p id="output-shop">${$("#output").text()}</p>
+                            <p class="chosen-value" id="output-shop">${$("#output").text()}</p>
                             <i class="fas fa-plus" id="increase-shop"></i>
                         </div>
                     </div>
                 </div>`
             );
-            
-            
             }
         }
         getTotalAmount();
@@ -166,13 +166,14 @@ $("document").ready(function () {
         });
     }
 
-    let amount = 0;
+    
+ /*    let amount = 0;
     function getTotalVolume() {
-        $('#output-shop').each(function(){
-            amount += parseFloat($("#output").text());
+        $(".chosen-value").each(function(){
+            amount += parseFloat($("#output").text() - amount);
             $("#output-shop").text(amount);
         });
-    }
+    } */
     
     $(".fa-times-circle").click(function() {
         $(".cart-products").empty();
