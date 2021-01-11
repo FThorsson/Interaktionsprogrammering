@@ -264,6 +264,7 @@ input[type=text] {
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    cursor: pointer;
 }
 
 .image-details {
