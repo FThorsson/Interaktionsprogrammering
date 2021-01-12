@@ -108,20 +108,7 @@ $("document").ready(function () {
 
     $(".add-button").click(function () {
         $(".shopping-cart").toggleClass("shopping-cart--open");
-        let temp_id = $(this).parent().siblings().find();
-        // this är knappen för att lägga till 
-
-        let item_list = $('.shopping-cart').children('.cart-products');
-        console.log(item_list);
-        if ($(".shopping-cart").find().attr("id") == temp_id) {
-            console.log("Hejsan");
-            /* let amount = $("#output-shop").text();
-            amount += parseFloat($("#output").text()); */
-
-            /* getTotalVolume(); */
-
-        } else {
-            $(".shopping-cart").append(`<div id="${temp_id}" class="cart-products">
+            $(".shopping-cart").append(`<div class="cart-products">
                     <i class="fas fa-times-circle" onclick="removeProduct(this)"></i>
                     <img src="${$(".thumbnail-container").find("img").attr("src")}"></img>
                     <div class="product-info">
@@ -134,21 +121,14 @@ $("document").ready(function () {
                         </div>
                     </div>
                 </div>`);
-        }
 
         getTotalAmount();
         updateCartAmount();
+
+        setTimeout(function () {
+            $(".shopping-cart").toggleClass("shopping-cart--open");
+        }, 5000);
     });
-
-
-
-    /*    let amount = 0;
-       function getTotalVolume() {
-           $(".chosen-value").each(function(){
-               amount += parseFloat($("#output").text() - amount);
-               $("#output-shop").text(amount);
-           });
-       } */
 
     $(".fa-times-circle").click(function () {
         $(".cart-products").empty();
@@ -225,10 +205,10 @@ $("document").ready(function () {
 function updateCartAmount() {
     let amount = 0;
     $("#display-amount").empty();
-        $('.cart-products').each(function () {
-            amount += parseInt($("#output-shop").text());
-        });
-        $("#display-amount").append(`${amount}`);
+    $('.cart-products').each(function () {
+        amount += parseInt($(this).find("#output-shop").text());
+    });
+    $("#display-amount").append(`${amount}`);
     if (amount < 1) {
         $("#display-amount").empty();
     }
