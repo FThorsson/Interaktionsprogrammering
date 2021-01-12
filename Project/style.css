@@ -267,6 +267,44 @@ input[type=text] {
     cursor: pointer;
 }
 
+.dummy-text {
+    margin-top: 25px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.dummy-text p {
+    margin-left: 20px;
+}
+
+.blue-divider {
+    width: 60px;
+    height: 70px;
+    background-color:rgb(1, 31, 75, 0.65) ;
+}
+
+.three-lines {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blue-lines {
+    width: 50px;
+    height: 5px;
+    margin: 10px;
+}
+#line-1 {
+    background-color:rgb(1, 31, 75, 0.65);
+}
+#line-2 {
+    background-color:rgba(86, 114, 156, 0.65);
+}
+#line-3 {
+    background-color:rgba(0, 10, 26, 0.65);
+}
+
 .main-page {
     position: relative;
 }

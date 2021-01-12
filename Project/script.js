@@ -127,7 +127,7 @@ $("document").ready(function () {
 
         setTimeout(function () {
             $(".shopping-cart").toggleClass("shopping-cart--open");
-        }, 5000);
+        }, 3000);
     });
 
     $(".fa-times-circle").click(function () {
