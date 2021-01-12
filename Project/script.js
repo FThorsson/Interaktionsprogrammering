@@ -126,7 +126,7 @@ $("document").ready(function () {
                     <img src="${$(".thumbnail-container").find("img").attr("src")}"></img>
                     <div class="product-info">
                         <p>${$(".name").text()}</p>
-                        <p>${$(".product-price").text()}</p>
+                        <p class="price-shop">${$(".product-price").text()}</p>
                         <div class="quantity">
                             <i class="fas fa-minus" onclick="decreaseShop(this)"></i>
                             <p class="chosen-value" id="output-shop">${$("#output").text()}</p>
@@ -137,19 +137,10 @@ $("document").ready(function () {
         }
 
         getTotalAmount();
-        let displayAmount = $("#output-shop").text();
-        $("#display-amount").empty();
-        $("#display-amount").append(`<p>${(displayAmount)}</p>`);
+        updateCartAmount();
     });
 
-    let total = 0;
 
-    function getTotalAmount() {
-        $('.product-price').each(function () {
-            total += $("#output-shop").text() * parseFloat($(this).text());
-            $('.total-price').text(total);
-        });
-    }
 
     /*    let amount = 0;
        function getTotalVolume() {
@@ -231,26 +222,49 @@ $("document").ready(function () {
 
 });
 
+function updateCartAmount() {
+    let amount = 0;
+    $("#display-amount").empty();
+        $('.cart-products').each(function () {
+            amount += parseInt($("#output-shop").text());
+        });
+        $("#display-amount").append(`${amount}`);
+    if (amount < 1) {
+        $("#display-amount").empty();
+    }
+}
+
+function getTotalAmount() {
+    let total = 0;
+    $('.cart-products').each(function () {
+        total += $("#output-shop").text() * parseFloat($(this).find(".price-shop").text());
+    });
+    $('.total-price').text(total);
+}
+
 function removeProduct(e) {
     let prevAmount = $(".total-price").val();
     let removedAmount = $(e).siblings().find("p").val();
     prevAmount = prevAmount - removedAmount;
-    $('.total-price').text(prevAmount);
     $(e).parent().remove();
+    getTotalAmount();
+    updateCartAmount()
 };
 
 function decreaseShop(e) {
-    $($(e).siblings().html(function (i, val) {
-        if (val > 1) {
-            return (val * 1) - 1;
-        }
-        getTotalAmount();
-    }));
+    let amount = parseInt($(e).siblings("p").html());
+    if (amount > 1) {
+        amount -= 1;
+        $(e).siblings("p").html(amount);
+    }
+    getTotalAmount();
+    updateCartAmount()
 }
 
 function increaseShop(e) {
-    $($(e).siblings().html(function (i, val) {
-        return (val * 1) + 1;
-        getTotalAmount();
-    }));
+    let amount = parseInt($(e).siblings("p").html());
+    amount += 1;
+    $(e).siblings("p").html(amount);
+    getTotalAmount();
+    updateCartAmount()
 }
